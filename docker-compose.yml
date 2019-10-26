@@ -1,0 +1,13 @@
+version: "3"
+services:
+  app:
+    image: spring/napptilus
+    ports:
+    - 8080:8080
+    depends_on:
+    - mongodb
+  mongodb:
+    image: mongo:latest
+    container_name: "mongodbcontainer"
+    ports:
+    - 27017:27017
